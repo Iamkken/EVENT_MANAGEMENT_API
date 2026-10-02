@@ -12,6 +12,10 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use("/api/auth", userRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Welcome to EventHorizon API");
+});
+
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
