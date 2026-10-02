@@ -13,7 +13,7 @@ const registerUser = async (req, res) => {
     try {
     const ExistingUser = await User.findOne({ email: value.email });
     if (ExistingUser) {
-        return res.status(400).json({ error: "Email already registered" });
+        return res.status(409).json({ error: "Email already exists" });
     }
     const verificationToken = crypto.randomBytes(32).toString("hex");
     const verificationTokenExpires = new Date(Date.now() + 60 * 60 * 1000); 
