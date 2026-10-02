@@ -2,6 +2,11 @@
 A secure RESTful backend API for EventHorizon.
 The API provides user registration, email verification, secure login, JWT-based authentication, and protected user profile access.
 
+## DEPLOYED LINK FOR TESTING GLOBALLY
+https://event-management-api-8pv0.onrender.com
+
+## ROOT ROUTER: 
+/api/auth
 
 ## Running the Project locally
 Start the server with: npm run dev
@@ -18,7 +23,6 @@ When the application starts successfully, it connects to MongoDB and listens on 
 | GET | `/api/auth/verify-email` | Verify a user's email address |
 | POST | `/api/auth/login` | Login a verified user and receive a JWT |
 | GET | `/api/auth/profile` | Access the authenticated user's profile |
-
 
 
 ## API Testing
